@@ -22,7 +22,7 @@ then
 		echo removing $2
 		cd /bin/
 		sudo echo su acquired
-		rm $2
+		sudo rm $2
 	fi
 else
 	echo "please specify what you want to do (install, remove)"
