@@ -1,0 +1,29 @@
+if [[ $1  = "install" ]]
+then
+	if [[ -z $2 ]]
+	then
+		echo please specify a package to install!
+	else
+		echo installing $2
+		cd /etc/scpm/packages/
+		sudo echo su acquired
+		sudo curl https://conzikool10.github.io/scpm-official-repo/$2
+		sudo chmod a+x $2
+		
+	fi
+
+elif [[ $1 = "remove" ]]
+then
+	if [[ -z $2 ]]
+	then
+		echo please specify a package to remove!
+	else
+		echo removing $2
+		cd /etc/scpm/packages
+		sudo echo su acquired
+		rm $2
+	fi
+else
+	echo "please specify what you want to do (install, remove)"
+fi 
+echo finished actions
