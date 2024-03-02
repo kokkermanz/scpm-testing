@@ -7,6 +7,7 @@ then
 		echo installing $2
 		cd /bin/
 		sudo echo su acquired
+		sudo rm $2
 		sudo wget https://conzikool10.github.io/scpm-official-repo/$2
 		sudo chmod a+x $2
 		
