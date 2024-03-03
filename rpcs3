@@ -13,9 +13,3 @@ function remove {
 	cd $INSTALLDIR
 	rm $NAME -r
 }
-
-install
-
-unset INSTALLDIR
-unset URL
-unset NAME
