@@ -5,12 +5,7 @@ then
 		echo please specify a applet to install!
 	else
 		echo installing $2
-		cd /bin/
-		sudo echo su acquired
-		sudo rm $2
-		sudo wget https://conzikool10.github.io/scpm-official-repo/$2
-		sudo chmod a+x $2
-		
+		su -c "./scpmi $2"
 	fi
 
 elif [[ $1 = "remove" ]]
@@ -20,9 +15,7 @@ then
 		echo please specify a applet to remove!
 	else
 		echo removing $2
-		cd /bin/
-		sudo echo su acquired
-		sudo rm $2
+		su -c "./scpmr $2"
 	fi
 else
 	echo "please specify what you want to do (install, remove)"
