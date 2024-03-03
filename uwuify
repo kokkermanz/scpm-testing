@@ -1,0 +1,15 @@
+#!/bin/bash
+export INSTALLDIR=/usr/local/bin
+export URL="wget https://raw.githubusercontent.com/kokkermanz/scpm-testing/main/uwuifyy"
+export NAME="uwuifyy"
+
+function install {
+	# we depend on wget for installs sadly
+	wget -O "$INSTALLDIR/$NAME" $URL
+	chmod a+x $INSTALLDIR/$NAME
+}
+
+function remove {
+	cd $INSTALLDIR
+	rm $NAME -r
+}
