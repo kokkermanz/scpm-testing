@@ -2,6 +2,6 @@ if [ -z $1 ]
 then
   echo Please input an http code.
 else
-  wget https://http.cat/$1
+  wget https://http.cat/$1.jpg
 fi
   
