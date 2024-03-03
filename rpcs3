@@ -9,6 +9,11 @@ function install {
 	chmod a+x $INSTALLDIR/$NAME
 }
 
+function remove {
+	cd $INSTALLDIR
+	rm $NAME -r
+}
+
 install
 
 unset INSTALLDIR
